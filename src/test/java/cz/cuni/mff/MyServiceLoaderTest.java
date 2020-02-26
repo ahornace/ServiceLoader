@@ -14,7 +14,7 @@ public class MyServiceLoaderTest {
     @Test
     public void test() {
         Iterable<Driver> it = MyServiceLoader.load(Driver.class);
-        assertThat(it, containsInAnyOrder(Set.of(Matchers.instanceOf(com.mysql.jdbc.Driver.class),
+        assertThat(it, containsInAnyOrder(Set.of(Matchers.instanceOf(com.mysql.cj.jdbc.Driver.class),
                 Matchers.instanceOf(org.postgresql.Driver.class))));
     }
 
